@@ -28,9 +28,9 @@ defmodule FoodTruck.Seed do
 
       if changeset.valid? do
         vendor = FoodTruck.Repo.insert!(changeset)
-        Logger.info("Vendor created with id of #{vendor.id}") 
+        Logger.info("Vendor created with an id of #{vendor.id}") 
       else
-        Logger.error("Error retrieving food truck data: #{inspect(changeset.errors)}") 
+        Logger.error("Error retrieving vendor data: #{inspect(changeset.errors)}") 
       end 
     end)
   end
