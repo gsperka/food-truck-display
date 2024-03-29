@@ -59,6 +59,17 @@ Run Tests:
 mix test
 ```
 
+This app uses the Google API. You will need your own key and set it as an environment variable
+
+In you `/.env` file, 
+
+```
+export GOOGLE_CLIENT_SECRET="YOUR SECRET"
+```
+
+You can also run this same command in your terminal shell.
+
+
 Start your Phoenix server:
 
 ```
