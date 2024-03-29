@@ -22,8 +22,34 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
+let Hooks = {}
+
+Hooks.MapSightingsHandler = {
+  mounted() {
+    let lat = parseFloat(document.getElementById("lat").innerHTML);
+    let lng = parseFloat(document.getElementById("lng").innerHTML);
+
+    let map = new google.maps.Map(document.getElementById("map"), {
+      center: {
+        lat: lat,
+        lng: lng
+      },
+      zoom: 16
+    });
+
+    const marker = new google.maps.Marker({
+      position: {lat: lat, lng: lng},
+      animation: google.maps.Animation.DROP,
+    })
+
+    // To add the marker to the map, call setMap();
+    marker.setMap(map)
+  },
+}
+
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {
+  hooks: Hooks,
   longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken}
 })

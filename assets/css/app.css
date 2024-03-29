@@ -4,3 +4,9 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+#map {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}

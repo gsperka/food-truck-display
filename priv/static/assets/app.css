@@ -6647,6 +6647,10 @@ input[type="file_input"].has-error:not(.phx-no-feedback):focus {
   margin-bottom: 2.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -7192,6 +7196,16 @@ input[type="file_input"].has-error:not(.phx-no-feedback):focus {
   vertical-align: middle;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-\[0\.8125rem\] {
   font-size: 0.8125rem;
 }
@@ -7470,6 +7484,12 @@ input[type="file_input"].has-error:not(.phx-no-feedback):focus {
 }
 
 /* This file is for your main application CSS */
+
+#map {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
 
 .only\:table-row:only-child {
   display: table-row;
