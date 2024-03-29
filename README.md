@@ -4,15 +4,18 @@
 
 This app was created on an M3 Macbook Air using Sonoma 14.4.
 
-Overview: 
+### Overview
+ 
 The homepage displays all the local food trucks after seeding the database. Once you click "view", you can see the individual show page for that data point. The Google Maps API was used to drop a marker on the exact location on where the food truck will be. 
 
-Future improvement ideas: 
+### Future improvement ideas
 - Make mobile responsive
 - Add a search functionality on the homepage
 - Upgrade the overall look and feel
 - Sorting of table columns on homepage
 
+
+### Getting Started
 ```
 cd ~/Desktop 
 git clone https://github.com/gsperka/food-truck-display.git
