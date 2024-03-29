@@ -11,6 +11,8 @@ config :food_truck,
   ecto_repos: [FoodTruck.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+config :food_truck, google_api_key: System.get_env("GOOGLE_CLIENT_SECRET")
+
 # Configures the endpoint
 config :food_truck, FoodTruckWeb.Endpoint,
   url: [host: "localhost"],
