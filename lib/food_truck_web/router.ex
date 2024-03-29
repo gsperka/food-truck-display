@@ -18,6 +18,7 @@ defmodule FoodTruckWeb.Router do
     pipe_through :browser
 
     live "/", VendorsLive
+    live "/vendor/:id", VendorLive
   end
 
   # Other scopes may use custom stacks.
