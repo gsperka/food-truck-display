@@ -84,7 +84,7 @@ defmodule FoodTruckWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import FoodTruckWeb.CoreComponents
+      use PetalComponents
       import FoodTruckWeb.Gettext
 
       # Shortcut for generating JS commands
