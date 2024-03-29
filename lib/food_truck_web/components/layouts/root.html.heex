@@ -11,7 +11,7 @@
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBreKDDo8ItIwbuIYunwda8R4y5ZKgJBG4"
+    src={"https://maps.googleapis.com/maps/api/js?key=#{Application.fetch_env!(:food_truck, :google_api_key)}"}
     defer
   ></script>
   </head>

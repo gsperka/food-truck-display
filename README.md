@@ -8,7 +8,7 @@ This is a free service hosted on [Render](https://render.com/) and it will take 
 
 ## Clone Repo
 
-This app was created on an M3 Macbook Air using Sonoma 14.4.
+This app was created on an M3 Macbook Air using Sonoma 14.4. It was an implementation of the [Peck assignment](https://github.com/peck/engineering-assessment).
 
 ### Overview
  

@@ -4,6 +4,7 @@ defmodule FoodTruckWeb.VendorLive do
 
   @spec mount(any(), any(), Phoenix.LiveView.Socket.t()) :: {:ok, Phoenix.LiveView.Socket.t()}
   def mount( %{"id" => id} = _params, _session, socket) do
+    IO.inspect(Application.fetch_env!(:food_truck, :google_api_key))
     with {:ok, result} <- Vendor.get_by_id((id)) do
       socket = assign(socket, vendor: result)
       {:ok, socket}
