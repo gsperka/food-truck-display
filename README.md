@@ -35,6 +35,12 @@ Seed database:
 mix run priv/repo/seeds.exs
 ```
 
+Run Tests: 
+
+```
+mix test
+```
+
 Start your Phoenix server:
 
 ```
@@ -42,10 +48,6 @@ mix phx.server
 ```
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-
-
-
 
 ## Learn more
 
