@@ -19,7 +19,7 @@ defmodule FoodTruck.MixProject do
   def application do
     [
       mod: {FoodTruck.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ex_machina]
     ]
   end
 
@@ -52,7 +52,8 @@ defmodule FoodTruck.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:httpoison, "~> 2.0"},
-      {:petal_components, "~> 1.0"}
+      {:petal_components, "~> 1.0"},
+      {:ex_machina, "~> 2.7.0"}
     ]
   end
 
