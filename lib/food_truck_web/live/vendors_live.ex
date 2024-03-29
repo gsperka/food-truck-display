@@ -46,7 +46,7 @@ defmodule FoodTruckWeb.VendorsLive do
               <.badge color={get_badge_color(vendor.status)} label={vendor.status} />
             </.td>
             <.td>
-              <.a to={"/vendor/#{vendor.objectid}"} label="View" class="text-primary-600 dark:text-primary-400" />
+              <.a to={"/vendor/#{vendor.id}"} label="View" class="text-primary-600 dark:text-primary-400" />
             </.td>
           </.tr>
         <% end %>

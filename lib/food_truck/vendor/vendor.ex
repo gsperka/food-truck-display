@@ -21,6 +21,14 @@ defmodule FoodTruck.Vendor do
     timestamps(type: :utc_datetime)
   end
 
+  @spec changeset(
+          {map(), map()}
+          | %{
+              :__struct__ => atom() | %{:__changeset__ => map(), optional(any()) => any()},
+              optional(atom()) => any()
+            },
+          :invalid | %{optional(:__struct__) => none(), optional(atom() | binary()) => any()}
+        ) :: Ecto.Changeset.t()
   @doc false
   def changeset(vendor, attrs) do
     vendor
@@ -34,5 +42,12 @@ defmodule FoodTruck.Vendor do
       order_by: :applicant
     )
     |> Repo.all()
+  end
+
+  def get_by_id(id) do
+    case Repo.get(FoodTruck.Vendor, id) do
+      nil -> {:error, :not_found}
+      vendor -> {:ok, vendor}
+    end
   end
 end

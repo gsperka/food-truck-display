@@ -1,24 +1,29 @@
 defmodule FoodTruckWeb.VendorLive do
   use FoodTruckWeb, :live_view
-  # alias FoodTruck.Vendor
+  alias FoodTruck.Vendor
+  # alias FoodTruck.Repo
 
   @spec mount(any(), any(), Phoenix.LiveView.Socket.t()) :: {:ok, Phoenix.LiveView.Socket.t()}
-  def mount(_params, _session, socket) do
-    IO.inspect("hi")
-    # # this is needed so the database is only queried once on page load
-    # if connected?(socket) do
-    #   socket = assign(socket, vendors: Vendor.sort_vendors_by_applicant())
-    #   {:ok, socket}
-    # else
-    #   socket = assign(socket, vendors: [])
-    #   {:ok, socket}
-    # end
-    {:ok, socket}
+  def mount( %{"id" => id} = _params, _session, socket) do
+    with {:ok, result} <- Vendor.get_by_id((id)) do
+      socket = assign(socket, vendor: result)
+       {:ok, socket}
+    else
+      {:error, :not_found} ->
+        socket = assign(socket, vendor: nil)
+        {:ok, socket}
+    end
   end
 
   def render(assigns) do
     ~H"""
-      <h1>Hi</h1>
+      <div>
+        <%= if @vendor do %>
+          <%= @vendor.id %>
+        <% else %>
+          <h1>There is no vendor with that ID</h1>
+        <% end %>
+      </div>
     """
   end
 end

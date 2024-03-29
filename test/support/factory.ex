@@ -4,6 +4,7 @@ defmodule FoodTruck.Factory do
 
   def vendor_factory do
     %FoodTruck.Vendor{
+      id: "90485398349053",
       objectid: "735318",
       applicant: "Ziaurehman Amini",
       locationdescription: "MARKET ST: DRUMM ST intersection",
