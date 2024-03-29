@@ -61,7 +61,7 @@ mix test
 
 This app uses the Google API. You will need your own key and set it as an environment variable
 
-In you `/.env` file, 
+In your `/.env` file, paste:
 
 ```
 export GOOGLE_CLIENT_SECRET="YOUR SECRET"
