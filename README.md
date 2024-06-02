@@ -1,11 +1,5 @@
 # Food Truck Viewer  
 
-## To View Staging
-
-Visit https://food-truck-display.onrender.com/
-
-This is a free service hosted on [Render](https://render.com/) and it will take roughly 30 seconds to load.
-
 ## Clone Repo
 
 This app was created on an M3 Macbook Air using Sonoma 14.4. It was an implementation of the [Peck assignment](https://github.com/peck/engineering-assessment).
